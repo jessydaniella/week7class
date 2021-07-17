@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Button from './Button';
+import Button2 from './Button2';
+import Card from './card';
 
 function App() {
+  const products = {
+    title: 'my 2023 bag',
+    description: 'this bag is so cool',
+    price: 3000
+  };
+  const handleProduct = () => {
+    alert(products.title);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App"> 
+    <Button text='Sign in' />
+    <Button2 />
+
+     <Card myProduct ={products} myClick={handleProduct} />
+     {}
     </div>
   );
-}
+}                                   
 
 export default App;
